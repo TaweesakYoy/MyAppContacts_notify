@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="taweesak.com.myappcontactsnotify">
+
+    <!-- STORAGE -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- CAMERA -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- SMS -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <!-- INTERNET -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <!-- test boot sleep mode -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iconapps"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.AddNewContactActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".Activity.EditActivity" />
+        <activity android:name=".Appointment.Alert" />
+        <activity android:name=".Appointment.CreateNote" />
+        <activity android:name=".Appointment.Edit_Note" />
+        <activity android:name=".Appointment.View_Note" />
+
+       <!-- <receiver
+            android:name=".Appointment.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".Appointment.NotificationManager2"
+            android:enabled="true"
+            android:exported="true" /> -->
+
+        <activity android:name=".Appointment.TestAlertActivity" />
+        <activity android:name=".Activity.QrcodeActivity" />
+        <activity android:name=".Activity.AddUserDataActivity" />
+        <activity android:name=".Activity.EditUserDataActivity" />
+        <activity android:name=".reminder.ReminderAddActivity" />
+        <activity android:name=".reminder.ReminderEditActivity"></activity>
+        <activity android:name=".reminder.AlertReminder" />
+
+        <receiver android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true"
+            >
+            <intent-filter>
+
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <!--<action android:name="android.intent.action.REBOOT"/>-->
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>

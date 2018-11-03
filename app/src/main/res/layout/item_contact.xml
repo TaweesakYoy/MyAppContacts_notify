@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="0dp">
+
+    <com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        swipe:leftEdgeSwipeOffset="0dp"
+        swipe:rightEdgeSwipeOffset="0dp">
+
+        <!--********************************************************************************************-->
+        <!--Bottom View For Right to Left-->
+        <!--แถบซ่อนฝั่งขวา-->
+
+        <LinearLayout
+            android:id="@+id/item_list_bottom_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <requestFocus />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/contact_img_R"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="#bfbfc1"
+                app:civ_border_width="3dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/icon_line"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/iconsline48"
+                app:civ_border_color="#bfbfc1"
+                app:civ_border_width="3dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/icon_mail"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/iconsemail64"
+                app:civ_border_color="#bfbfc1"
+                app:civ_border_width="3dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/icon_phone"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/iconsphone64"
+                app:civ_border_color="#bfbfc1"
+                app:civ_border_width="3dp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/swipe_item_list_icon_R"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/arrow_left_right_simple_white_right" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--********************************************************************************************-->
+        <!-- Another Bottom View For Left to Right -->
+        <!--แถบซ่อนฝั่งซ้าย-->
+        <LinearLayout
+            android:id="@+id/swipe_item_list_left_bottom_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <requestFocus />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/contact_img_L"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="#bfbfc1"
+                app:civ_border_width="3dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/swipe_item_edit"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/iconsedit64"
+                app:civ_border_color="#bfbfc1"
+                app:civ_border_width="3dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/swipe_item_alarm"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/iconsalarm64"
+                app:civ_border_color="#bfbfc1"
+                app:civ_border_width="3dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/swipe_item_delete"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/iconstrash48"
+                app:civ_border_color="#bfbfc1"
+                app:civ_border_width="3dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/swipe_item_list_icon_L"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/arrow_left_right_simple_white_left" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--********************************************************************************************-->
+        <!--แถบ Preview-->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            tools:context=".Activity.MainActivity">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/contact_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="21dp"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="#bfbfc1"
+                app:civ_border_width="3dp" />
+
+            <TextView
+                android:id="@+id/tv_name_priview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="name"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/swipe_item_list_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/arrow_left_right_simple_white" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </com.daimajia.swipe.SwipeLayout>
+
+
+</LinearLayout>
+
+
+
+
